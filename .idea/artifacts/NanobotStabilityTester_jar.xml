@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="NanobotStabilityTester:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/NanobotStabilityTester_jar</output-path>
+    <root id="archive" name="NanobotStabilityTester.jar">
+      <element id="module-output" name="NanobotStabilityTester" />
+    </root>
+  </artifact>
+</component>

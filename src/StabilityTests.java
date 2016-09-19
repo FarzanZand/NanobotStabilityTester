@@ -38,7 +38,8 @@ public class StabilityTests extends ControlFunctions{
         // Main testing loop
         do {
             iterations = 0;
-            System.out.println("Choose your destiny! \n");
+            System.out.println("Instructions: Have the Spotify client running in the background with a playlist selected and repeat enabled. Mac Only. \n" +
+                    "Select your test by typing an integer within the defined interval. \n");
             wait(500);
             System.out.println("" +
                     "1. Stress the next button.\n" +
@@ -46,8 +47,7 @@ public class StabilityTests extends ControlFunctions{
                     "3. Toggle pause and resume like a maniac.\n" +
                     "4. Set random volume ranges like you just don't care.\n" +
                     "5. Increment and decrement volume systematically like you care a little.\n" +
-                    "6. Release the Kraken. Run a mix of control commands (volume, skip, previous, pause, resume, change playlist). \n" +
-                    "7. Change default playlist. \n");
+                    "6. Release the Kraken. Run a mix of control commands (volume, skip, previous, pause, resume, change playlist). \n");
 
 
             // Accept input from user and make sure it is valid.
@@ -218,7 +218,7 @@ public class StabilityTests extends ControlFunctions{
             switch(rand.nextInt(8) + 1){
                 case 1: case 2: case 3:
                     nextTrack();
-                    typeOfCommand = "Next.";
+                    typeOfCommand = "Next";
                     break;
                 case 4: case 5:
                     if(rand.nextInt(5) > 2)
@@ -230,12 +230,12 @@ public class StabilityTests extends ControlFunctions{
                     typeOfCommand = "PlayPause";
                     break;
                 case 7:
-                    loadRandomPlaylist();
+                    loadRandomPlaylist(); //Doesn't always change playlist. Debug:
                     typeOfCommand = "randomPlaylist";
                     break;
                 case 8:
-                    setVolume(rand.nextInt(30)+10);
-                    typeOfCommand = "randomVolume.";
+                    setVolume(rand.nextInt(30)+10); 
+                    typeOfCommand = "randomVolume";
                     break;
                 default:
                     System.out.println("Not between the range. Restart program. ");
